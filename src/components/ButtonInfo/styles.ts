@@ -6,7 +6,7 @@ import { RFValue } from 'react-native-responsive-fontsize';
 
 export const Container = styled(RectButton)`
   position: absolute;
-  bottom: ${getBottomSpace()}px;
+  bottom: ${getBottomSpace() + 20}px;
   justify-content: center;
   align-items: center;
   right: 20px;

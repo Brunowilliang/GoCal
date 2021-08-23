@@ -19,4 +19,5 @@ export const Title = styled.Text<ButtonProps>`
   font-family: ${({ theme }) => theme.fonts.medium};
   font-size: ${RFValue(14)}px;
   color: ${({ textColor, theme }) => textColor ? textColor : theme.colors.white};
+  text-align: center;
 `;
