@@ -1,0 +1,33 @@
+{
+  "name": "gocal",
+  "displayName": "GoCal",
+  "expo": {
+    "name": "GoCal",
+    "slug": "gocal",
+    "version": "1.0.1",
+    "assetBundlePatterns": [
+      "**/*"
+    ],
+    "orientation": "portrait",
+    "icon": "./assets/icon.png",
+    "splash": {
+      "image": "./assets/splash.png",
+      "resizeMode": "contain",
+      "backgroundColor": "#37B874"
+    },
+    "ios": {
+      "bundleIdentifier": "com.brunogarcia.gocal",
+      "buildNumber": "1.0.1"
+    },
+    "android": {
+      "package": "com.brunogarcia.gocal",
+      "versionCode": 2,
+      "adaptiveIcon": {
+        "foregroundImage": "./assets/foreground.png",
+        "backgroundImage": "./assets/background.png",
+        "backgroundColor": "#37B874"
+      }
+    },
+    "description": "Calculadora da Taxa Metabólica Basal"
+  }
+}
