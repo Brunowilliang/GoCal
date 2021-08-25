@@ -17,7 +17,7 @@
     },
     "ios": {
       "bundleIdentifier": "com.brunogarcia.gocal",
-      "buildNumber": "1.0.1"
+      "buildNumber": "1.0.2"
     },
     "android": {
       "package": "com.brunogarcia.gocal",

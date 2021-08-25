@@ -1,33 +1,30 @@
 import React, { useRef } from 'react';
 
-import { Container, Icon, Content, Text } from './styles';
+import { Container } from './styles';
 import { Modalize } from 'react-native-modalize';
 import { Button } from '../Button';
 import { Linking } from 'react-native';
+import { useTheme } from 'styled-components';
 
 export function ButtonInfo(){
   const modalGenderRef = useRef<Modalize>(null);
-
-  function openGenderModal() {
-    modalGenderRef.current?.open();
-  }
-
+  const theme = useTheme();
+  
   function openURL() {
     Linking.openURL('https://calculator-online.net/content-disclaimer/');
     modalGenderRef.current?.close();
   }
 
+  const TextInfo = "Isenção de responsabilidade de \n conteúdo legal"
+
   return (
-    <>
-      <Container onPress={openGenderModal}>
-        <Icon name="info" />
-      </Container>
-      <Modalize ref={modalGenderRef} modalHeight={600} snapPoint={300}>
-        <Content>
-          <Text>Isenção de responsabilidade{'\n'}de conteúdo legal</Text>
-          <Button title="Informações" onPress={openURL}/>
-        </Content>
-      </Modalize>
-    </>
+    <Container>
+      <Button
+        title={TextInfo}
+        onPress={openURL}
+        color={theme.colors.transparent}
+        textColor={theme.colors.primary}
+      />
+    </Container>
   );
 }
