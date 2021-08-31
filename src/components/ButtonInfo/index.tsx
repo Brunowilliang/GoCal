@@ -1,27 +1,24 @@
-import React, { useRef } from 'react';
+import React from 'react';
+import { Linking } from 'react-native';
 
 import { Container } from './styles';
-import { Modalize } from 'react-native-modalize';
 import { Button } from '../Button';
-import { Linking } from 'react-native';
 import { useTheme } from 'styled-components';
 
-export function ButtonInfo(){
-  const modalGenderRef = useRef<Modalize>(null);
-  const theme = useTheme();
-  
-  function openURL() {
-    Linking.openURL('https://calculator-online.net/content-disclaimer/');
-    modalGenderRef.current?.close();
-  }
 
-  const TextInfo = "Isenção de responsabilidade de \n conteúdo legal"
+export function ButtonInfo(){
+  const theme = useTheme();
+  const TextInfo = "Política de privacidade e\nisenção de conteúdo"
+
+  function openURLgoCal() {
+    Linking.openURL("https://www.goagenda.app/politica-de-privacidade-gocal");
+  }
 
   return (
     <Container>
       <Button
         title={TextInfo}
-        onPress={openURL}
+        onPress={openURLgoCal}
         color={theme.colors.transparent}
         textColor={theme.colors.primary}
       />
